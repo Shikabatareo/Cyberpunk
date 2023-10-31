@@ -1,0 +1,596 @@
+@charset "UTF-8";
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+input {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border: none;
+  outline: none;
+  font-style: normal;
+  font-weight: bold !important;
+  font-size: 15px;
+  line-height: 15px;
+  color: #000 !important;
+}
+
+input::-webkit-input-placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 15px;
+  color: #999;
+}
+
+input::-moz-placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 15px;
+  color: #999;
+}
+
+input:-ms-input-placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 15px;
+  color: #999;
+}
+
+input::-ms-input-placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 15px;
+  color: #999;
+}
+
+input::placeholder {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 15px;
+  color: #999;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+@font-face {
+  font-family: "Archangelsk";
+  font-display: swap;
+  src: url("../fonts/Archangelsk.woff") format("woff"), url("../fonts/Archangelsk.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+#top_banner {
+  background: url("/img/bg_banner.jpg");
+  background-size: cover;
+}
+
+span {
+  color: #52BEDC;
+}
+
+.inner_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.inner_header .right_header .menu {
+  list-style: none;
+}
+
+.inner_header .right_header .menu li {
+  display: inline-block;
+  padding: 15px;
+}
+
+.rectangle {
+  margin-top: 560px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.rectangle .relative {
+  position: relative;
+}
+
+.rectangle p {
+  position: absolute;
+  padding-right: 76px;
+  margin-top: 50px;
+  margin-left: 20px;
+  font-size: 62px;
+  font-family: "Archangelsk";
+}
+
+.rectangle button {
+  position: absolute;
+  color: yellow;
+  background-color: #111;
+  margin-top: 250px;
+  margin-left: 20px;
+  font-size: 25px;
+  font-family: "Archangelsk";
+}
+
+h1 {
+  font-family: "Archangelsk";
+  font-size: 62px;
+}
+
+.info {
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+.info > .descr {
+  margin-top: 50px;
+  line-height: 30px;
+}
+
+.info_sale {
+  color: #fff;
+  margin-bottom: 150px;
+}
+
+.info_sale > .sale {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.info_sale > .sale > h1 {
+  margin-left: 20px;
+}
+
+#form {
+  background-color: #111;
+}
+
+.form {
+  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #777777;
+}
+
+.form button {
+  font-size: 25px;
+  font-family: "Archangelsk";
+  background-color: yellow;
+  color: black;
+}
+
+.form > .form_group > input {
+  border: none;
+  border-bottom: 1px solid #777777;
+  background-color: transparent;
+}
+
+#file-upload {
+  display: none;
+}
+
+.form-group_file {
+  border: 1px dashed #777777;
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+}
+
+button {
+  border: none;
+  width: 272px;
+  height: 78px;
+}
+
+.custom-checkbox {
+  display: none;
+}
+
+.custom-checkbox + label {
+  position: relative;
+  padding-left: 30px;
+  padding-bottom: 50px;
+}
+
+.custom-checkbox + label:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #ccc;
+  background: transparent;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.custom-checkbox:checked + label:after {
+  content: "✓";
+  color: yellow;
+  font-size: 13px;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+}
+
+#ad {
+  padding-top: 100px;
+  padding-bottom: 70px;
+  background-color: yellow;
+}
+
+#ad .logo_svg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#ad .logo_icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#ad .logo_icon div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#ad img {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+#ad button {
+  color: yellow;
+  background-color: #000;
+  font-size: 25px;
+  font-family: "Archangelsk";
+  margin-top: 80px;
+}
+
+#buy {
+  padding-top: 50px;
+  background: url("/img/bg_cyber.jpg");
+  background-repeat: no-repeat;
+  background-size: 55%;
+  background-color: #111;
+  color: white;
+}
+
+#buy h4 {
+  margin-bottom: 15px;
+}
+
+#buy h1 {
+  margin-bottom: 15px;
+}
+
+#buy .logo_icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 75px;
+}
+
+#buy .logo_icon img {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+#buy .logo_icon div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#buy .svg_icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
+}
+
+#buy .svg_icon img {
+  margin-right: 80px;
+  margin-bottom: 40px;
+}
+
+#buy .svg_icon div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.inner_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.inner_footer .footer_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.inner_footer .footer_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.inner_footer img {
+  margin-right: 30px;
+}
+
+.footer_down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+  background-color: #111;
+  color: white;
+  font-size: 15px;
+  height: 40px;
+}
+
+.footer_down p {
+  margin-top: 15px;
+  text-align: center;
+}
+
+@media screen and (max-width: 575px) {
+  #top_banner {
+    background-position: center;
+  }
+
+  .inner_header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .rectangle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: translateY(40px);
+        -ms-transform: translateY(40px);
+            transform: translateY(40px);
+  }
+
+  .rectangle .relative {
+    width: 108%;
+  }
+
+  .rectangle button {
+    margin-top: 150px;
+    margin-left: 150px;
+  }
+
+  .rectangle p {
+    margin-top: 20px;
+    margin-left: 80px;
+    text-align: center;
+    padding: 0;
+    font-size: 40px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  #notif {
+    font-size: 30px;
+    line-height: 30px;
+    letter-spacing: 2px;
+  }
+
+  #notif div img {
+    position: relative;
+    margin-top: 40px;
+    right: 30px;
+    width: 115%;
+  }
+
+  #notif .footer_img {
+    margin-top: 50px;
+  }
+
+  .info img {
+    width: 800px;
+  }
+
+  .info_sale {
+    margin-bottom: 30px;
+  }
+
+  #form {
+    font-size: 25px;
+  }
+
+  #form .consoles {
+    display: none;
+  }
+
+  .form button {
+    margin-bottom: 10px;
+  }
+
+  .form > .form_group > input {
+    width: 300%;
+  }
+
+  .form-group_file {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .custom-checkbox + label:before {
+    top: 10px;
+  }
+
+  #ad {
+    font-size: 30px;
+  }
+
+  #ad .logo_svg img {
+    width: 50%;
+  }
+
+  #buy {
+    background-size: 100%;
+    font-size: 30px;
+  }
+
+  #buy .cyberpunk_text {
+    margin-top: 300px;
+  }
+
+  .inner_footer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 25px;
+  }
+
+  .inner_footer .footer_img {
+    padding-top: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 30px;
+  }
+}

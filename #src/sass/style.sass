@@ -1,0 +1,299 @@
+@mixin font($font_name, $file_name, $weight, $style)			
+	@font-face 
+		font-family: $font_name
+		font-display: swap
+		src: url('../fonts/#{$file_name}.woff') format('woff'), url('../fonts/#{$file_name}.woff2') format('woff2')
+		font-weight: #{$weight}
+		font-style: #{$style}
+	
+@import './mixins.sass'
+@import './zero_styles.sass'
+@import  './fonts.sass'
+
+	
+html,body
+	overflow-x: hidden
+#top_banner
+	background: url('/img/bg_banner.jpg')
+	background-size: cover
+@include mobile
+	#top_banner
+		background-position: center
+
+span
+	color: #52BEDC
+.inner_header
+	display: flex
+	justify-content: space-between
+	align-items: center
+	.right_header
+		.menu
+			list-style: none
+			li
+				display: inline-block
+				padding: 15px
+	@include mobile
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		align-items: center
+		
+		
+.rectangle
+	margin-top: 560px
+	display: flex
+	flex-direction: column-reverse
+	align-items: flex-end
+	justify-content: center
+	.relative
+		position: relative
+	p
+		position: absolute
+		padding-right: 76px
+		margin-top: 50px
+		margin-left: 20px
+		font-size: 62px
+		font-family: 'Archangelsk'
+	button
+		position: absolute
+		color: yellow
+		background-color: #111
+		margin-top: 250px
+		margin-left: 20px
+		font-size: 25px
+		font-family: 'Archangelsk'
+	@include mobile
+		display: flex
+		justify-content: center
+		align-items: center
+		transform: translateY(40px)
+		.relative
+			width: 108%
+		button
+			margin-top: 150px
+			margin-left: 150px
+		p
+			margin-top: 20px
+			margin-left: 80px
+			text-align: center
+			padding: 0
+			font-size: 40px
+
+
+h1
+	font-family: 'Archangelsk'
+	font-size: 62px
+	@include mobile
+		font-size: 30px
+		
+#notif
+	@include mobile
+		font-size: 30px
+		line-height: 30px
+		letter-spacing: 2px
+		div
+			img
+				position: relative
+				margin-top: 40px
+				right: 30px
+				width: 115%	
+		.footer_img
+				margin-top: 50px
+.info
+	margin-top: 80px
+	margin-bottom: 50px
+	>.descr
+		margin-top: 50px
+		line-height: 30px
+
+	@include mobile
+		img
+			width: 800px
+.info_sale
+	color: #fff
+	margin-bottom: 150px
+	@include mobile
+		margin-bottom: 30px
+	>.sale
+		display: flex
+		align-items: center
+		margin-bottom: 30px
+		>h1
+			margin-left: 20px 
+
+#form
+	background-color: #111
+	@include mobile
+		font-size: 25px
+		.consoles
+			display: none		
+.form
+	height: 400px
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	color: #777777
+	button
+		font-size: 25px
+		font-family: 'Archangelsk'
+		background-color: yellow
+		color: black
+		@include mobile
+			margin-bottom: 10px
+
+	>.form_group
+		>input
+			border: none
+			border-bottom: 1px solid #777777
+			background-color: transparent
+			@include mobile
+				width: 300%
+
+ 
+#file-upload
+	display: none
+
+.form-group_file
+	border: 1px dashed #777777
+	display: inline-block
+	padding: 10px
+	text-align: center
+	@include mobile
+		margin-top: 20px
+		margin-bottom: 20px
+
+button
+	border: none
+	width: 272px
+	height: 78px
+.custom-checkbox
+	display: none
+
+.custom-checkbox + label
+	position: relative
+	padding-left: 30px
+	padding-bottom: 50px
+.custom-checkbox + label:before
+	position: absolute
+	content: ''
+	left: 0
+	top: 0
+	width: 15px
+	height: 15px
+	border: 1px solid #ccc
+	background: transparent
+	margin-top: 5px
+	cursor: pointer
+	@include mobile
+		top: 10px
+
+.custom-checkbox:checked + label:after
+	content: '\2713'
+	color: yellow
+	font-size: 13px
+	position: absolute
+	top: 3px
+	left: 3px
+
+#ad
+	padding-top: 100px
+	padding-bottom: 70px
+	background-color: yellow
+	@include mobile
+		font-size: 30px	
+	.logo_svg
+		display: flex
+		justify-content: space-between
+		@include mobile
+			img
+				width: 50%
+	.logo_icon
+		display: flex
+		flex-direction: column
+	.logo_icon div
+		display: flex
+		align-items: center
+	img
+		margin-right: 10px
+		margin-bottom: 10px
+	button
+		color: yellow
+		background-color: #000
+		font-size: 25px
+		font-family: 'Archangelsk'
+		margin-top: 80px
+
+#buy
+	padding-top: 50px
+	background: url('/img/bg_cyber.jpg')
+	background-repeat: no-repeat
+	background-size: 55%
+	background-color: #111
+	color: white
+	@include mobile
+		background-size: 100%
+		font-size: 30px
+		.cyberpunk_text
+			margin-top: 300px
+	h4
+		margin-bottom: 15px
+	h1
+		margin-bottom: 15px
+	.logo_icon
+		display: flex
+		flex-direction: column
+		margin-bottom: 75px
+		img
+			margin-right: 10px
+			margin-bottom: 10px
+	.logo_icon div
+		display: flex
+		align-items: center
+	.svg_icon
+		display: flex
+		flex-direction: column
+		margin-bottom: 20px
+		img
+			margin-right: 80px
+			margin-bottom: 40px
+	.svg_icon div
+		display: flex
+		align-items: center
+	
+.inner_footer
+	display: flex
+	justify-content: space-between
+	@include mobile
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		font-size: 25px
+	.footer_img
+		display: flex
+		align-items: center
+		justify-content: center
+		@include mobile
+			padding-top: 20px
+			flex-direction: column
+			margin-bottom: 30px
+	.footer_text
+		display: flex
+		align-items: center
+		justify-content: center
+		@include mobile
+		flex-direction: column
+	img
+		margin-right: 30px
+	
+.footer_down
+	display: flex
+	justify-content: center
+	align-items: center
+	margin-top: 10px
+	background-color: #111
+	color: white
+	font-size: 15px
+	height: 40px
+	p
+		margin-top: 15px
+		text-align: center
